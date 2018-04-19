@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var arr = [2, 1, 2, 4, 6, 3, 2, 3];
+    arr.sort(function (a, b) {
+      return a - b
+    })
+    // 随机颜色
+    function randomColor() {
+      var r = parseInt(Math.random() * 256);
+      var g = parseInt(Math.random() * 256);
+      var b = parseInt(Math.random() * 256);
+      return 'rgb(' + r + ',' + g + ',' + b + ')';
+    }
+    document.body.style.backgroundColor = randomColor();
+
+    var date = new Date();
+
+    var future = new Date('2018-04-20 00:00:00');
+    var time = parseInt((future - date) / 1000);
+    var d = parseInt(time / 60 / 60 / 24);
+    var h = parseInt(time / 60 / 60) % 24;
+    console.log(h);
+
+    // 不足2位补零
+    function addZore(n) {
+      return n < 10 ? "0" + n : n;
+    }
+  </script>
+</body>
+
+</html>
